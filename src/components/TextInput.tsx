@@ -8,11 +8,17 @@ export default function TextInput({
   return (
     <div className='p-3 rounded-md bg-base-200 w-12/12 md:w-10/12 lg:w-6/12 mb-4 md:mb-7'>
         <textarea
-            onKeyUp={(e)=> { setValue(e.target?.value ?? '') }}
+            onKeyUp={(e: KeyboardEvent)=> {
+              const target: any = e.target
+              
+              if (target) {
+                setValue(target['value'] ?? '')
+              }
+            }}
             className='w-full border-0 outline-0 resize-y text-lg min-h-25' 
             placeholder='Your text here...'
             value={value}
-        >{value}</textarea>
+        />
     </div>
   )
 }
