@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "remixicon/fonts/remixicon.css";
+
+@plugin "daisyui" {
+    themes: lemonade --default, light;
+}
+
+@font-face {
+    font-family: 'title';
+    src: url(./fonts/Poppins-Black.ttf);
+}
+
+@font-face {
+    font-family: 'text';
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+*::selection {
+    background: rgba(105, 141, 100, 0.494);
+}
+
+h1, h2, h3, h4, h5, h6, b, strong, .h1, .h2, .h3, .h4, .h5, .h6, .b, .strong, .font-bold {
+    font-family: 'title', sans-serif;
+}
+
+body {
+    font-family: 'text', sans-serif;
+}
