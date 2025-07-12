@@ -16,7 +16,7 @@ export default function ConvertionResult({
         <div className='flex flex-row items-center justify-between'>
             <span>Converted in: {convertion}</span>
 
-            <div className="tooltip mb-1" data-tip="copy">
+            <div className="tooltip mb-1" data-tip={isCopied ? 'copied' : 'copy'}>
                 <button className="btn btn-sm btn-secondary" onClick={()=> copy(result)}>
                     {
                       isCopied ? (
